@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { getTodos } from '../actions/index'
 
 export default class TodoList extends Component {
     onEditClick = (event) => {
