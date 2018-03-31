@@ -6,7 +6,7 @@ export default class TodoList extends Component {
     }
 
     onDeleteClick = (event, a) => {
-        console.log(event.target.id)        
+        console.log(event.target.id)
     }
 
     RenderTodos = () => {
@@ -30,7 +30,7 @@ export default class TodoList extends Component {
         return mock.map(todo => {
             return (
                 <tr key={todo.id}>
-                    <th scope="row">{todo.id}</th>
+                    <td >{todo.id}</td>
                     <td>{todo.description}</td>
                     <td>{todo.date}</td>
                     <td className="text-center">
@@ -46,10 +46,12 @@ export default class TodoList extends Component {
         return (
             <table className="table table-hover">
                 <thead>
-                    <th scope="col">ID</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Date</th>
-                    <th scope="col" className="text-center">Actions</th>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Date</th>
+                        <th scope="col" className="text-center">Actions</th>
+                    </tr>
                 </thead>
                 <tbody>
                     {this.RenderTodos()}
